@@ -12,12 +12,13 @@ const cartRouter = require('./routers/cartRoutes');
 const paymentRouter = require('./routers/paymentRoutes');
 const bookingsRouter = require('./routers/bookingsRoutes');
 
+const frontendUrl = process.env.FRONTEND_URL;
 const app = express();
 
 app.use(
   cors({
-    origin: true,
-    credentials: true,
+    origin: frontendUrl,
+    credentials: true
   }),
 );
 
